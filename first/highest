@@ -8,6 +8,11 @@
 # numbers. Default fow howmany is 10.
 #
 
+if [ -z "$1" ]; then
+  echo 'usage: higheest filanem [-N]'
+  exit 1
+fi
+
 filename=$1
 filename=${filename:?"missing."}
 howmany=${2:-10}
